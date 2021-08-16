@@ -1,0 +1,7 @@
+{
+      "editor.tokenColorCustomizations": {
+            "[Dracula]": {
+                  "comments": "#ffd1dc"
+            }
+      },
+}
