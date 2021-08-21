@@ -15,15 +15,17 @@ const PORT = process.env.PORT || 8081;
 const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@react-memories.xdcn8.mongodb.net/${process.env.MONGODB_DB}?retryWrites=true&w=majority`;
 
 mongoose
-  .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
   .then(() =>
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
   )
   .catch((error) => {
     console.error(error);
   });
-
-mongoose.set("useFindAndModify", false);
 
 app.use(morgan("dev"));
 app.use(helmet());
