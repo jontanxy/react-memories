@@ -35,7 +35,7 @@ app.use(express.urlencoded({ extended: true, limit: "5mb" }));
 
 app.get("/", (req, res, next) => {
   res.status(200).json({
-    message: "Hello World🌎",
+    message: "Welcome to Memories API🤟🏻🌎",
   });
 });
 
