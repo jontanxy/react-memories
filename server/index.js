@@ -12,10 +12,10 @@ dotenv.config();
 const app = express();
 
 const PORT = process.env.PORT || 8081;
-const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@react-memories.xdcn8.mongodb.net/${process.env.MONGODB_DB}?retryWrites=true&w=majority`;
+// const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@react-memories.xdcn8.mongodb.net/${process.env.MONGODB_DB}?retryWrites=true&w=majority`;
 
 mongoose
-  .connect(CONNECTION_URL, {
+  .connect(process.env.CONNECTION_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
