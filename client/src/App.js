@@ -40,7 +40,7 @@ const App = () => {
             alignItems="stretch"
             spacing={3}
           >
-            <Grid item xs={12} sm={7}>
+            <Grid item xs={12} sm={8}>
               <Posts setCurrentId={setCurrentId} />
             </Grid>
             <Grid item xs={12} sm={4}>
