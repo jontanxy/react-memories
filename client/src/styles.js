@@ -13,11 +13,11 @@ export default makeStyles((theme) => ({
     color: "#330033",
   },
   image: {
-    marginLeft: "15px",
+    marginLeft: "0px",
   },
   [theme.breakpoints.down("sm")]: {
     mainContainer: {
-      direction: "column-reverse",
+      flexDirection: "column-reverse",
     },
   },
 }));
